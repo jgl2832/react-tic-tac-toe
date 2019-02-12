@@ -21,6 +21,8 @@ docker-compose up -d
 
 Your project is live at: http://localhost:8080
 
+> Remember that in development mode you need to manually run `npm install` and `npm run build` in order to pull all the 3rd party packages.
+
 ### Production
 
 Simply run:
@@ -51,6 +53,10 @@ docker-compose down
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+Install the 3rd party packages, needed to run the application.
 
 ### `npm start`
 
