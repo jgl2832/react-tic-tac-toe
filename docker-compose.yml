@@ -5,5 +5,5 @@ services:
     build: .
     environment:
       - NODE_ENV=production
-    expose:
-      - '8080'
+    ports:
+      - '3000:3000'

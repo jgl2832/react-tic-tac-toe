@@ -30,7 +30,7 @@ Simply run:
 docker-compose up -d
 ```
 
-Your project is live at: http://localhost:8080
+Your project is live at: http://0.0.0.0:3000
 
 If you want to switch from development to production, remember to execute:
 ```
