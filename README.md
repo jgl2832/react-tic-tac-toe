@@ -2,9 +2,61 @@ Made by following instructions here: https://reactjs.org/tutorial/tutorial.html
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Setup with Docker
+
+You can run this projects through Docker in two modes: development or production.
+
+### Development
+When running the project in development mode, edits to files are reflected in real time in the Docker container.
+
+Run in your console (only the first time):
+```
+cp docker-compose.override.yml.dist docker-compose.override.yml
+```
+
+And then:
+```
+docker-compose up -d
+```
+
+Your project is live at: http://localhost:8080
+
+> Remember that in development mode you need to manually run `npm install` and `npm run build` in order to pull all the 3rd party packages.
+
+### Production
+
+Simply run:
+```
+docker-compose up -d
+```
+
+Your project is live at: http://0.0.0.0:3000
+
+If you want to switch from development to production, remember to execute:
+```
+rm docker-compose.override.yml
+```
+
+## Docker commands
+
+If you want to enter inside the running Docker container, run:
+```
+docker-compose exec web bash
+```
+
+If you want to stop and remove the Docker container, run:
+```
+docker-compose down
+```
+
+
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+Install the 3rd party packages, needed to run the application.
 
 ### `npm start`
 
