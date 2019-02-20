@@ -8,6 +8,6 @@ stages:
 - name: Deploy
   steps:
   - applyYamlConfig:
-      path: ./config/docker/web/deployment.yaml
+      path: ./config/rancher/deployment.yaml
 timeout: 60
 branch: {}
