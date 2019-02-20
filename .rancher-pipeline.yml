@@ -1,0 +1,13 @@
+stages:
+- name: Compile
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: react-tic-tac-toe:${CICD_EXECUTION_SEQUENCE}
+- name: Deploy
+  steps:
+  - applyYamlConfig:
+      path: ./config/rancher/deployment.yaml
+timeout: 60
+branch: {}
